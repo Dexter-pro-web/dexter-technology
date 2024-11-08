@@ -3,7 +3,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 export const AnimatedCounter = ({
   target,
-  duration,
+  duration = 2,
 }: {
   target: number;
   duration: number;
