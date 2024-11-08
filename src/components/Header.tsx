@@ -13,7 +13,7 @@ export default function Header() {
 
 
   const toggleNav = () => {
-    setShowNav(!showNav);g
+    setShowNav(!showNav);
   };
 
   const scrollToSection = (ref:any) => {
