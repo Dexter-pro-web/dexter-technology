@@ -9,7 +9,7 @@ import Footer from './components/Footer.tsx'
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
-  const caseStudiesRef = useRef(null);
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")!).render(
         heroRef={heroRef}
         aboutRef={aboutRef}
         servicesRef={servicesRef}
-        caseStudiesRef={caseStudiesRef}
+
       />
       <main>
         <Routes>

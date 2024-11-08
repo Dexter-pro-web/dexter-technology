@@ -32,7 +32,7 @@ function App() {
     const heroRef = useRef(null);
     const aboutRef = useRef(null);
     const servicesRef = useRef(null);
-    const caseStudiesRef = useRef(null);
+
   const aboutUs = [
     {
       img: CpuCharge,
