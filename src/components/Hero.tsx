@@ -5,11 +5,12 @@ interface HeroProps {
     header: string;      
     paragraph: string;  
     button_text: string; 
-    image: string;    
+    image: string;
+    ref: any;    
 }
 
 
-export default function Hero({ header, paragraph, button_text, image }: HeroProps) {
+export default function Hero({ header, paragraph, button_text, image, ref }: HeroProps) {
     return (
       <section id="hero" className="bg-[#111318] relative grid  lg:grid-cols-[40%_60%] p-5 md:px-10 lg:px-20 min-h-screen">
         <div className="my-auto flex flex-col items-start gap-5 md:gap-10 ">
