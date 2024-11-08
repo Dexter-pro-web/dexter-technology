@@ -13,10 +13,10 @@ export default function Header() {
 
 
   const toggleNav = () => {
-    setShowNav(!showNav);
+    setShowNav(!showNav);g
   };
 
-  const scrollToSection = (ref) => {
+  const scrollToSection = (ref:any) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
