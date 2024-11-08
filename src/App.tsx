@@ -1,4 +1,5 @@
 import "./App.css";
+import {motion} from 'framer-motion'
 import Hero from "./components/Hero";
 import SectionHeading from "./components/SectionHeading";
 import Button from "./components/Button";
@@ -113,6 +114,11 @@ function App() {
   //   },
   // ];
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <>
       <Hero
@@ -134,20 +140,40 @@ function App() {
           />
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-10">
             {aboutUs?.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="grid gap-5 p-5 border-2 border-[#F0F0F0] rounded-md"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView={"show"}
+                transition={{ duration: 0.5, staggerChildren: 0.1 }}
               >
-                <img src={item?.img} alt="DexterPro Technology About us Icon" />
+                <motion.img
+                  src={item?.img}
+                  alt="DexterPro Technology About us Icon"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                />
                 <div className="grid gap-5">
-                  <h3 className="text-[#210203] text-[18px] font-[500] ">
+                  <motion.h3
+                    className="text-[#210203] text-[18px] font-[500] "
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
                     {item?.heading}
-                  </h3>
-                  <p className="text-[#5F5F6D] text-[14px] leading-[24px] font-[400] text-left">
+                  </motion.h3>
+                  <motion.p
+                    className="text-[#5F5F6D] text-[14px] leading-[24px] font-[400] text-left"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
                     {item?.content}
-                  </p>
+                  </motion.p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -183,13 +209,17 @@ function App() {
                     index === 0 ? "md:order-last m-auto " : "w-full"
                   } ${index > 0 ? " basis-[50%]" : ""}  `}
                 >
-                  <img
+                  <motion.img
                     src={item?.img}
                     alt="DexterPro Technology About us Icon"
                     className={`${
                       index == 1 || index == 2 ? "w-full" : ""
                     } mx-auto  xl-w-[70%] `}
+                     initial={{ filter: 'blur(30px)' }}
+                     whileInView={{ filter: 'blur(0)' }}
+                     transition={{ duration: 0.5 }}
                   />
+                
                 </div>
 
                 <div
@@ -197,20 +227,26 @@ function App() {
                     index == 0 ? "flex col-span-1" : ""
                   }   p-5`}
                 >
-                  <h3
+                  <motion.h3
                     className={`${
                       index == 0 ? "text-[#FFFFFF] text-left" : ""
                     }text-center text-[#210203] text-[18px] font-[700] `}
+                      initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     {item?.heading}
-                  </h3>
-                  <p
+                  </motion.h3>
+                  <motion.p
                     className={`${
                       index === 0 ? "text-[#FAFAFA] " : "text-center"
                     } text-[#5F5F6D] text-[14px] leading-[24px] font-[400] `}
+                       initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     {item?.content}
-                  </p>
+                  </motion.p>
                 </div>
               </div>
             ))}
@@ -257,7 +293,7 @@ function App() {
           </div>
         </div>
         <DexterAcademy />
-        <Consultation id={'case-studies'} />
+        <Consultation id={"case-studies"} />
       </section>
     </>
   );
