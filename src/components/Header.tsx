@@ -6,10 +6,21 @@ import Menu from '../assets/icons/menu.svg'
 
 export default function Header() {
 
-const [showNav, setShowNav] = useState<boolean>(false);
-const toggleNav = () => {
-  setShowNav(!showNav);
-};
+  const [showNav, setShowNav] = useState(false);
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
+  const caseStudiesRef = useRef(null);
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
+
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
 
   return (
@@ -31,7 +42,8 @@ const toggleNav = () => {
         <ul className="flex-cols lg:flex  lg:items-center gap-8">
           <li>
             <NavLink
-              to="#hero"
+              to="#"
+              onClick={() => scrollToSection(heroRef)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Home
@@ -39,7 +51,8 @@ const toggleNav = () => {
           </li>
           <li>
             <NavLink
-              to="#about"
+              to="#"
+              onClick={() => scrollToSection(aboutRef)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               About us
@@ -47,7 +60,8 @@ const toggleNav = () => {
           </li>
           <li>
             <NavLink
-              to="#services"
+              to="#"
+              onClick={() => scrollToSection(servicesRef)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Services
