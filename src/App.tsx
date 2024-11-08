@@ -130,7 +130,7 @@ function App() {
         image={Image}
         id="home"
       />
-      <section className="grid gap-20 p-5 md:px-10 md:py-10 lg:p-20 ">
+      <section className="grid gap-40 p-5 md:px-10 md:py-10 lg:p-20 xl:py-40 ">
         <div id="about" className="grid gap-10">
           <SectionHeading
             title="About Us"
