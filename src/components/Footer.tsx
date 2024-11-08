@@ -1,4 +1,4 @@
-import React from "react";
+
 import Logo from "../assets/Logo.svg";
 import X_logo from "../assets/icons/X_logo.svg";
 import Facebook_logo from "../assets/icons/facebook_logo.svg";
