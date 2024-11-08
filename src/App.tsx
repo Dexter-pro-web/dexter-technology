@@ -234,7 +234,7 @@ function App() {
 
           <div className="flex flex-col w-full md:basis-[32%] lg:basis-1/4">
             <h3 className="text-[40px]  font-[500]">
-              <AnimatedCounter target={500} />+
+              <AnimatedCounter target={500} duration={2}/>+
             </h3>
             <span className="text-[18px] font-[400] text-[#5F5F6D]">
               Hours of consultation
@@ -242,7 +242,7 @@ function App() {
           </div>
           <div className=" lg:pl-5 lg:border-l-2 border-l-[#F0F0F0] flex flex-col w-full basis-1/4">
             <h3 className="text-[40px]  font-[500]">
-              <AnimatedCounter target={25} />+
+              <AnimatedCounter target={25} duration={2}/>+
             </h3>
             <span className="text-[18px] font-[400] text-[#5F5F6D]">
               Client satisfied
@@ -250,7 +250,7 @@ function App() {
           </div>
           <div className=" lg:pl-5 lg:border-l-2 border-l-[#F0F0F0] flex flex-col w-full  md:basis-[32%] lg:basis-1/4">
             <h3 className="text-[40px]  font-[400]">
-              <AnimatedCounter target={5} />+
+              <AnimatedCounter target={5} duration={2}/>+
             </h3>
             <span className="text-[18px] font-[400] text-[#5F5F6D]">
               Solutions delivered
