@@ -2,7 +2,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import SectionHeading from "./components/SectionHeading";
 import Button from "./components/Button";
-import Carousel from "./components/Carousel";
+// import Carousel from "./components/Carousel";
 import { AnimatedCounter } from "./components/AnimatedCounter";
 import DexterAcademy from "./components/DexterAcademy"
 // import Img1 from "./assets/images/Mask group.png";
@@ -20,8 +20,8 @@ import Porcurement from "./assets/images/procurementImg.png";
 import CyberSec from "./assets/images/cybersecImg.png";
 import Technology from "./assets/images/technologyImg.png";
 import Enterprise from "./assets/images/enterpriseImg.png";
-import DexterApp from "./assets/images/dexterapp.png";
-import FrebsonGym from "./assets/images/frebsongym.png";
+// import DexterApp from "./assets/images/dexterapp.png";
+// import FrebsonGym from "./assets/images/frebsongym.png";
 import Consultation from "./components/Consultation";
 
 
@@ -98,20 +98,20 @@ function App() {
     },
   ];
 
-  const portfolio = [
-    {
-      img: DexterApp,
-      heading: "Dexter App",
-      content:
-        "The Dexter App links you with pros for services like plumbing, food delivery, laundry, and more. It's easy to use, updated often, and available on both Android and Apple devices.",
-    },
-    {
-      img: FrebsonGym,
-      heading: "Frebson Gym",
-      content:
-        "A complete digital solution for gym management, offering a smooth user experience for both gym staffs and gym members.",
-    },
-  ];
+  // const portfolio = [
+  //   {
+  //     img: DexterApp,
+  //     heading: "Dexter App",
+  //     content:
+  //       "The Dexter App links you with pros for services like plumbing, food delivery, laundry, and more. It's easy to use, updated often, and available on both Android and Apple devices.",
+  //   },
+  //   {
+  //     img: FrebsonGym,
+  //     heading: "Frebson Gym",
+  //     content:
+  //       "A complete digital solution for gym management, offering a smooth user experience for both gym staffs and gym members.",
+  //   },
+  // ];
 
   return (
     <>
