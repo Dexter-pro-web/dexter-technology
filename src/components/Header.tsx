@@ -28,6 +28,7 @@ export default function Header() {
           <li>
             <a
               href="#home"
+              onClick={()=> setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Home
@@ -36,6 +37,7 @@ export default function Header() {
           <li>
             <a
               href="#about"
+              onClick={()=> setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               About us
@@ -44,6 +46,7 @@ export default function Header() {
           <li>
             <a
               href="#services"
+              onClick={()=> setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Services
@@ -52,6 +55,7 @@ export default function Header() {
           <li>
             <a
               href="#case-studies"
+              onClick={()=> setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Case Studies

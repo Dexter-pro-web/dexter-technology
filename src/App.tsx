@@ -122,6 +122,7 @@ function App() {
         }
         button_text={"Book a free consultation"}
         image={Image}
+        id="home"
       />
       <section className="grid gap-20 p-5 md:px-10 md:py-10 lg:p-20 ">
         <div id="about" className="grid gap-10">
