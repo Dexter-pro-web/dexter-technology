@@ -123,7 +123,7 @@ function App() {
         button_text={"Book a free consultation"}
         image={Image}
       />
-      <section className="grid gap-20 p-5 md:px-10 md:py-10 lg:p-20 ">
+      <section id="about" className="grid gap-20 p-5 md:px-10 md:py-10 lg:p-20 ">
         <div className="grid gap-10">
           <SectionHeading
             title="About Us"
@@ -150,7 +150,7 @@ function App() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-10 items-start">
+        <div id="services" className="flex flex-col gap-10 items-start">
           <SectionHeading
             title="Services"
             heading="Expert Tech Solutions Tailored for Success."

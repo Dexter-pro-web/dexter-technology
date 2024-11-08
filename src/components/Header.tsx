@@ -31,7 +31,7 @@ const toggleNav = () => {
         <ul className="flex-cols lg:flex  lg:items-center gap-8">
           <li>
             <NavLink
-              to="/"
+              to="#hero"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Home
@@ -39,7 +39,7 @@ const toggleNav = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="#about"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               About us
@@ -47,7 +47,7 @@ const toggleNav = () => {
           </li>
           <li>
             <NavLink
-              to="/services"
+              to="#services"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Services
@@ -55,7 +55,7 @@ const toggleNav = () => {
           </li>
           <li>
             <NavLink
-              to="/case-studies"
+              to="#"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Case Studies
