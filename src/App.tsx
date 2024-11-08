@@ -1,5 +1,4 @@
 import "./App.css";
-import { useRef } from "react";
 import Hero from "./components/Hero";
 import SectionHeading from "./components/SectionHeading";
 import Button from "./components/Button";
@@ -28,11 +27,6 @@ import Consultation from "./components/Consultation";
 
 
 function App() {
-
-    const heroRef = useRef(null);
-    const aboutRef = useRef(null);
-    const servicesRef = useRef(null);
-
   const aboutUs = [
     {
       img: CpuCharge,
@@ -128,11 +122,9 @@ function App() {
         }
         button_text={"Book a free consultation"}
         image={Image}
-        
-        ref={heroRef}
       />
       <section className="grid gap-20 p-5 md:px-10 md:py-10 lg:p-20 ">
-        <div ref={aboutRef} className="grid gap-10">
+        <div id="about" className="grid gap-10">
           <SectionHeading
             title="About Us"
             heading="Leading Tech Service Company Based in Lagos"
@@ -158,7 +150,7 @@ function App() {
             ))}
           </div>
         </div>
-        <div ref={servicesRef} className="flex flex-col gap-10 items-start">
+        <div id="services" className="flex flex-col gap-10 items-start">
           <SectionHeading
             title="Services"
             heading="Expert Tech Solutions Tailored for Success."
@@ -240,7 +232,7 @@ function App() {
 
           <div className="flex flex-col w-full md:basis-[32%] lg:basis-1/4">
             <h3 className="text-[40px]  font-[500]">
-              <AnimatedCounter target={500} />+
+              <AnimatedCounter target={500} duration={2} />+
             </h3>
             <span className="text-[18px] font-[400] text-[#5F5F6D]">
               Hours of consultation
@@ -248,7 +240,7 @@ function App() {
           </div>
           <div className=" lg:pl-5 lg:border-l-2 border-l-[#F0F0F0] flex flex-col w-full basis-1/4">
             <h3 className="text-[40px]  font-[500]">
-              <AnimatedCounter target={25} />+
+              <AnimatedCounter target={25} duration={2} />+
             </h3>
             <span className="text-[18px] font-[400] text-[#5F5F6D]">
               Client satisfied
@@ -256,7 +248,7 @@ function App() {
           </div>
           <div className=" lg:pl-5 lg:border-l-2 border-l-[#F0F0F0] flex flex-col w-full  md:basis-[32%] lg:basis-1/4">
             <h3 className="text-[40px]  font-[400]">
-              <AnimatedCounter target={5} />+
+              <AnimatedCounter target={5} duration={2} />+
             </h3>
             <span className="text-[18px] font-[400] text-[#5F5F6D]">
               Solutions delivered
@@ -264,7 +256,7 @@ function App() {
           </div>
         </div>
         <DexterAcademy />
-        <Consultation />
+        <Consultation id={'case-studies'} />
       </section>
     </>
   );

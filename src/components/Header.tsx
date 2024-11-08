@@ -1,21 +1,12 @@
+// header.tsx
 import Button from "./Button";
-import { useState, } from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import Logo from "../assets/Logo.svg";
-import Menu from '../assets/icons/menu.svg'
+import Menu from "../assets/icons/menu.svg";
 
-export default function Header({ heroRef, aboutRef, servicesRef }:any) {
-  const [showNav, setShowNav] = useState(false);
-
-  const toggleNav = () => {
-    setShowNav(!showNav);
-  };
-
-  const scrollToSection = (ref: any) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+export default function Header() {
+  const [showNav, setShowNav] = useState<boolean>(false);
+  const toggleNav = () => setShowNav(!showNav);
 
   return (
     <header className="bg-[#111318] sticky top-0 flex z-[999] items-center justify-between p-5 md:px-10 md:py-5 lg:px-20 lg:py-5">
@@ -35,42 +26,38 @@ export default function Header({ heroRef, aboutRef, servicesRef }:any) {
       >
         <ul className="flex-cols lg:flex  lg:items-center gap-8">
           <li>
-            <NavLink
-              to="#"
-              onClick={() => scrollToSection(heroRef)}
+            <a
+              href="#home"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Home
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
-              to="#"
-              onClick={() => scrollToSection(aboutRef)}
+            <a
+              href="#about"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               About us
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
-              to="#"
-              onClick={() => scrollToSection(servicesRef)}
+            <a
+              href="#services"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Services
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
-              to="#"
+            <a
+              href="#case-studies"
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Case Studies
-            </NavLink>
+            </a>
           </li>
         </ul>
-
         <Button className=" " text="Get in touch" />
       </nav>
     </header>

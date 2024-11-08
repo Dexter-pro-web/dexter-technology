@@ -1,11 +1,19 @@
 import DexterImg from '../assets/images/DexterImg.png'
 
-const Consultation = () => {
+
+interface consultationProps {
+  id: string;
+}
+const Consultation = ({ id }: consultationProps) => {
   return (
-    <div className="container w-[80%] mx-auto">
+    <div id={id} className="container w-[80%] mx-auto">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="p-8 md:p-12 relative flex">
-          <img src={DexterImg} alt="" className='absolute top-0 md:left-[15%] xl:left-60 w-[70%] h-full'/>
+          <img
+            src={DexterImg}
+            alt=""
+            className="absolute top-0 md:left-[15%] xl:left-60 w-[70%] h-full"
+          />
           <svg
             className="absolute top-0 left-0 w-full h-full"
             viewBox="0 0 100 100"
