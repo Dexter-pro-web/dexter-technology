@@ -4,24 +4,18 @@ import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 import Menu from '../assets/icons/menu.svg'
 
-export default function Header() {
-
+export default function Header({ heroRef, aboutRef, servicesRef }:any) {
   const [showNav, setShowNav] = useState(false);
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const servicesRef = useRef(null);
-
 
   const toggleNav = () => {
     setShowNav(!showNav);
   };
 
-  const scrollToSection = (ref:any) => {
+  const scrollToSection = (ref: any) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   return (
     <header className="bg-[#111318] sticky top-0 flex z-[999] items-center justify-between p-5 md:px-10 md:py-5 lg:px-20 lg:py-5">
