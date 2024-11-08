@@ -157,7 +157,7 @@ function App() {
             ))}
           </div>
         </div>
-        <div ref={servicesRefgit a} className="flex flex-col gap-10 items-start">
+        <div ref={servicesRef} className="flex flex-col gap-10 items-start">
           <SectionHeading
             title="Services"
             heading="Expert Tech Solutions Tailored for Success."
