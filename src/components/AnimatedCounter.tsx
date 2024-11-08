@@ -1,7 +1,13 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const AnimatedCounter = ({ target, duration = 2 }: {target: number, duration: number}) => {
+export const AnimatedCounter = ({
+  target,
+  duration = 2,
+}: {
+  target: number;
+  duration: number;
+}) => {
   const controls = useAnimation();
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
