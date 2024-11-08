@@ -6,19 +6,14 @@ import './index.css'
 import Header from './components/Header.js';
 import Footer from './components/Footer.tsx'
 
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const servicesRef = useRef(null);
+
 
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Header
-        heroRef={heroRef}
-        aboutRef={aboutRef}
-        servicesRef={servicesRef}
-
+       
       />
       <main>
         <Routes>
