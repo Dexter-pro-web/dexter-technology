@@ -15,7 +15,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#111318] text-white p-5 md:p-10 lg:p-20">
+    <footer className="bg-[#111318] text-white p-5 md:p-10 lg:p-20 2xl:px-60">
       <div className=" mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-16">
           <div className="lg:w-1/3">

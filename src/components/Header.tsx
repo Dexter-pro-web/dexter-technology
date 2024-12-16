@@ -9,7 +9,7 @@ export default function Header() {
   const toggleNav = () => setShowNav(!showNav);
 
   return (
-    <header className="bg-[#111318] sticky top-0 flex z-[999] items-center justify-between p-5 md:px-10 md:py-5 lg:px-20 lg:py-5">
+    <header className="bg-[#111318] sticky top-0 flex z-[999] items-center justify-between p-5 md:px-10 md:py-5 lg:px-20 lg:py-5 2xl:px-60">
       <img src={Logo} alt="DexterPro Technology Logo" className="h-8" />
       <img
         src={Menu}
