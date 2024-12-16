@@ -1,6 +1,7 @@
 // header.tsx
 import Button from "./Button";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 import Menu from "../assets/icons/menu.svg";
 
@@ -8,9 +9,22 @@ export default function Header() {
   const [showNav, setShowNav] = useState<boolean>(false);
   const toggleNav = () => setShowNav(!showNav);
 
+  const redirectToMail =()=> {
+    // Replace 'your-email@example.com' with your email address
+    const email = "your-email@example.com";
+    const subject = "Hello!";
+    const body = "I'd like to discuss...";
+    console.log("Redirecting to mail with CC");
+    // Redirect to mail with CC
+    window.location.href = `mailto:?cc=${email}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
   return (
-    <header className="bg-[#111318] sticky top-0 flex z-[999] items-center justify-between p-5 md:px-10 md:py-5 lg:px-20 lg:py-5 2xl:px-60">
-      <img src={Logo} alt="DexterPro Technology Logo" className="h-8" />
+    <header className="bg-[#111318] sticky top-0 flex z-[999] items-center justify-between p-5 md:px-10 md:py-5 lg:px-20 lg:py-5 xl:px-40 2xl:px-[12rem]">
+      <NavLink to={'/'}>
+        {" "}
+        <img src={Logo} alt="DexterPro Technology Logo" className="h-8" />
+      </NavLink>
       <img
         src={Menu}
         alt="DexterPro Technology Menu Icon"
@@ -26,18 +40,18 @@ export default function Header() {
       >
         <ul className="flex-cols lg:flex  lg:items-center gap-8">
           <li>
-            <a
-              href="#home"
-              onClick={()=> setShowNav(false)}
+            <NavLink
+              to="/"
+              onClick={() => setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
             <a
-              href="#about"
-              onClick={()=> setShowNav(false)}
+              href="/#about"
+              onClick={() => setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               About us
@@ -45,8 +59,8 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="#services"
-              onClick={()=> setShowNav(false)}
+              href="/#services"
+              onClick={() => setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Services
@@ -54,15 +68,15 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="#case-studies"
-              onClick={()=> setShowNav(false)}
+              href="/#case-studies"
+              onClick={() => setShowNav(false)}
               className="text-white text-base font-medium leading-6 hover:text-gray-300 transition-colors"
             >
               Case Studies
             </a>
           </li>
         </ul>
-        <Button className=" " text="Get in touch" />
+        <Button className=" " text="Get in touch" onClick={redirectToMail} />
       </nav>
     </header>
   );

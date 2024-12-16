@@ -30,7 +30,7 @@ export default function Hero({
   return (
     <section
       id={id}
-      className="bg-[#111318] relative grid lg:grid-cols-[40%_60%] p-5 md:px-10 lg:px-20 2xl:px-60 2xl:py-0 min-h-screen 2xl:min-h-[800px]"
+      className="bg-[#111318] relative grid lg:grid-cols-[40%_60%] p-5 md:px-10 lg:px-20 2xl:px-[12rem] 2xl:py-0 min-h-screen 2xl:min-h-[800px]"
     >
       <motion.div
         className="my-auto flex flex-col items-start gap-5 md:gap-10"

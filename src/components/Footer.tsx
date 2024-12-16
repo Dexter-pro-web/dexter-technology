@@ -6,11 +6,41 @@ import LinkedIn_logo from "../assets/icons/linkedIn_logo.svg";
 
 export default function Footer() {
   const list = [
-    ["Product and Services", "Home", "About us", "Services", "Testimonials"],
     [
-      "Company",
-      "Contact us",
-      "36b Jay Jay Oladimeji Close, Ikate, Lekki, Lagos State",
+      {
+        content: "Product and Services",
+        link: '#'
+      },
+      {
+        content: "Home",
+        link: '#home'
+      },
+      {
+        content: 'About us',
+        link: '#about'
+      },
+      {
+        content: 'Services',
+        link: '#services'
+      },
+      {
+        content: 'Testimonials',
+        link: '#case-studies'
+      }
+      ],
+    [
+      {
+        content: 'Company',
+        link: '#'
+      },
+      {
+        content: 'Contact us',
+        link: '#'
+      },
+      {
+        content: "36b Jay Jay Oladimeji Close, Ikate, Lekki, Lagos State",
+        link: '_'
+      }
     ],
   ];
 
@@ -29,10 +59,10 @@ export default function Footer() {
                     <li
                       key={itemIndex}
                       className={`${
-                        itemIndex === 0 ? "text-[#E3E1E1]" : ""
+                        itemIndex === 0 ? "text-[#E3E1E1] font-semibold" : ""
                       } text-[#FFFFFF] text-sm`}
                     >
-                      {listItem}
+                      <a href={listItem.link}>{listItem.content}</a>
                     </li>
                   ))}
                 </ul>
